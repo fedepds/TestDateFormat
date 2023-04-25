@@ -27,10 +27,19 @@ public class DateFormatter
         {
             return string.Empty;
         }
-        else
+        int day =Int32.Parse(date.Substring(0,2));
+        int month=Int32.Parse(date.Substring(3,2));
+        if (month >12)
         {
-            return   date.Substring(6)+ "-" + date.Substring(3, 2) + "-" + date.Substring(0, 2);
+            return string.Empty;
         }
+        if (day >31)
+        {
+            return string.Empty;
+        }
+
+            return   date.Substring(6)+ "-" + date.Substring(3, 2) + "-" + date.Substring(0, 2);
+        
         
     }
 
