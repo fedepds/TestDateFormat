@@ -28,8 +28,6 @@ public class DateFormatterTests
         Assert.That(DateFormatter.ChangeFormat(input), Is.EqualTo(expected));
     }
     [Test]
- /// </summary>   
-
     public void TestWhiteDate()
     {
         const string input = "";
